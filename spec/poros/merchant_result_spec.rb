@@ -14,5 +14,6 @@ RSpec.describe MerchantResult do
 
     expect(merchant).to be_an_instance_of(MerchantResult)
     expect(merchant.name).to eq("Schroeder-Jerde")
+    expect(merchant.id).to eq('1')
   end
 end
