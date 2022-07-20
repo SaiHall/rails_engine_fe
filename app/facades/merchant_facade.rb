@@ -9,4 +9,10 @@ class MerchantFacade
     json = MerchantService.get_merchant(id)
     MerchantResult.new(json)
   end
+
+  def self.create_merchants_items(id)
+    json = MerchantService.get_merchants_items(id)
+    json.map { |data| MerchantItem.new(data) }
+  end
+
 end

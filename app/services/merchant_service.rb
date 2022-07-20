@@ -10,4 +10,10 @@ class MerchantService < BaseService
     data = get_json(response)
     data[:data]
   end
+
+  def self.get_merchants_items(id)
+    response = conn.get("merchants/#{id}/items")
+    data = get_json(response)
+    data[:data]
+  end
 end
