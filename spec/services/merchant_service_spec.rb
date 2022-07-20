@@ -9,4 +9,12 @@ RSpec.describe MerchantService do
       expect(json[0][:attributes]).to have_key(:name)
     end
   end
+  describe 'One merchant endpoint' do
+    it 'can retrieve data from single merchant end point' do
+      json = MerchantService.get_merchant(14)
+
+      expect(json).to be_a(Hash)
+      expect(json[:attributes]).to have_key(:name)
+    end
+  end
 end
