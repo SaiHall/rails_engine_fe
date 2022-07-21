@@ -7,4 +7,10 @@ RSpec.describe "Merchant show page", type: :feature do
 
     expect(page.all('.items').count).to eq(42)
   end
+
+  it 'should list the items by name' do
+    visit '/merchants/99'
+
+    expect(page).to have_content("Item Est Non")
+  end
 end
